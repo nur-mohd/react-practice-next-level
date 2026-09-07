@@ -1,29 +1,64 @@
-// const Card = (props) => {
-//     console.log(props);
+import "./Card.css"
+// const Card = ({name, age}) => {
+
+//     if(age < 18) {
+//         return <div className="card">"{name} You are too young"</div>
+//     }
 
 //     return (
-//         <div>
-//             {props.children}
-//             <p>First Name: {props.firstName}</p>
-//             <p>Last Name: {props.lastName}</p>
-//             <p>Age: {props.age}</p>
+//         <div className="card">
+//             <p>Name: {name}</p>
+//             <p>Age: {age}</p>
 //         </div>
-//     );
+//     )
 // }
 
 // export default Card
 
 
-const Card = ({children, firstName, lastName, age}) => {
+
+// const Card = ({name, age}) => {
+
+//     return (
+//         <>
+//           {age > 18 && <div className="card">
+//             <p>Name: {name}</p>
+//             <p>Age: {age}</p>
+//           </div>}
+
+//           {age < 18 && <div className="card">
+//             {name} You are too young
+//           </div>}
+//         </>
+//     )
+// }
+
+// export default Card
+
+
+
+
+const Card = ({name, age}) => {
 
     return (
-        <div>
-            {children}
-            <p>First Name: {firstName}</p>
-            <p>Last Name: {lastName}</p>
+        <>
+          {age > 18 ? (
+            <div className="card">
+            <p>Name: {name}</p>
             <p>Age: {age}</p>
-        </div>
+          </div>) : <div className="card">
+            {name} You are too young
+          </div>}
+        </>
     )
 }
 
 export default Card
+
+
+
+
+
+
+
+
