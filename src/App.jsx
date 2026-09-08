@@ -1,17 +1,21 @@
+import { useEffect, useState } from 'react'
 import './App.css'
-import Counter from './components/Counter';
-import Display from './components/Display';
-import CounterProvider from './providers/counter-provider';
-
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [anotherCount, setAnotherCount] = useState(0);
+  
+  useEffect(()=> {
+    console.log("Use Effect Run");
+  }, [count]);
   return (
     <>
-    <CounterProvider>
-      <p>Parent Components</p>
-       <Counter/>
-       <Display/>
-    </CounterProvider>
+      <button onClick={()=> setCount(count+1)}>
+        Increment ({count})
+      </button>
+      <button onClick={()=> setAnotherCount(anotherCount+1)}>
+        Increment Another ({anotherCount})
+      </button>
     </>
   )
 }
