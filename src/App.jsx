@@ -16,15 +16,18 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setMembers({name, age})
-        console.log(members);
+        // setMembers([...members, {name, age}])
+        setMembers((prev) => [
+          ...prev, {name, age}])
+        setName("");
+        setAge("");
     };
 
   return (
     <>
     <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e)=>setName(e.target.value)} />
-        <input type="number" onChange={(e)=>setAge(e.target.value)} />
+        <input type="text" onChange={(e)=>setName(e.target.value)} value={name}/>
+        <input type="number" onChange={(e)=>setAge(e.target.value)} value={age}/>
         <button type='submit'>Submit</button>
     </form>
      {members.map((member) => (
