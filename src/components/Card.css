@@ -4,8 +4,16 @@
     padding: 8px;
     margin: 10px;
 }
+
 .card-blue {
     background-color: rgba(93, 86, 214, 0.43);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 10px;
+}
+
+.card-orange {
+    background-color: rgba(163, 92, 37, 0.43);
     border-radius: 8px;
     padding: 8px;
     margin: 10px;

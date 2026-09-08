@@ -9,6 +9,7 @@ function App() {
   return (
     <>
     <div>
+      <p>Parent Components</p>
        <Counter count={count} setCount={setCount}/>
        <Display count={count}/>
     </div>

@@ -1,9 +1,10 @@
 import "./Card.css"
+import NestedDisplay from "./NestedDisplay"
 const Display = ({count}) => {
     return (
         <div className="card-blue">
-            {/* <h1>This is Display Component</h1> */}
-            <h1>{count}</h1>
+            <p>Child components</p>
+            <NestedDisplay count={count}/>
         </div>
     )
 }
