@@ -11,12 +11,18 @@ const Counter = () => {
         setCount(count + value)
     }
 
+    const handleDecrement = () => {
+        if(count > 0) {
+            setCount(count-1)
+        }
+    };
+
     return (
         <div>
             <button onClick={handleIncrement}>Increment</button>
             <button onClick={()=>handleIncrementByValue(5)}>Increment By Value</button>
             {count}
-            <button onClick={()=> setCount(count-1)}>Decrement</button>
+            <button onClick={handleDecrement}>Decrement</button>
         </div>
     )
 }
