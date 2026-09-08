@@ -1,4 +1,8 @@
-const NestedDisplay = ({count}) => {
+import { use } from "react";
+import { CounterContext } from "../providers/counter-provider";
+
+const NestedDisplay = () => {
+    const {count} = use(CounterContext);
     return (
         <div className="card-orange">
             <p>Grand Child</p>
