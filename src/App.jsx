@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './components/Card'
+import Counter from './components/Counter';
 
 function App() {
 
@@ -12,19 +13,8 @@ function App() {
 
   return (
     <>
-     {/* Manually Rendering */}
-      {/* <Card name={members[0].name} age={members[0].age} />
-      <Card name={members[1].name} age={members[1].age} />
-      <Card name={members[2].name} age={members[2].age} />
-      <Card name={members[3].name} age={members[3].age} /> */}
+    <Counter/>
 
-
-    {/* Dynamic Rendering */}
-    {
-      members.filter((member) => member.age > 18 ).sort((a,b) => a.age - b.age).map(member => (
-        <Card name={member.name} age = {member.age} />
-      ))
-    }
     </>
   )
 }

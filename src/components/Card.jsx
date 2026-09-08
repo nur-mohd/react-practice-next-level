@@ -7,10 +7,10 @@ const Card = ({name, age}) => {
 const [member, setMember] = useState("");
 
   const clickHandler = (memberName) => {
-    console.log("Greeting " + memberName);
+    setMember(memberName);
   };
 
-  console.log("Member:", member);
+  console.log("Member--->:", member);
 
     return (
         <div  
@@ -18,6 +18,8 @@ const [member, setMember] = useState("");
           className="card">
           <p>Name: {name}</p>
           <p>Age: {age}</p>
+          {/* {member} */}
+          {member && <p>Hello Mr. {member}</p>}
         </div>
     );
 }
