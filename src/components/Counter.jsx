@@ -1,7 +1,8 @@
-import { useState } from "react"
+import "./Card.css"
+// import { useState } from "react"
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
+const Counter = ({count,  setCount}) => {
+    // const [count, setCount] = useState(0);
 
     const handleIncrement = () => {
         setCount(count+1)
@@ -18,10 +19,9 @@ const Counter = () => {
     };
 
     return (
-        <div>
+        <div className="card">
             <button onClick={handleIncrement}>Increment</button>
             <button onClick={()=>handleIncrementByValue(5)}>Increment By Value</button>
-            {count}
             <button onClick={handleDecrement}>Decrement</button>
         </div>
     )
